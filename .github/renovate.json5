@@ -18,4 +18,18 @@
     // https://docs.renovatebot.com/presets-customManagers/#custommanagersdockerfileversions
     "customManagers:dockerfileVersions",
   ],
+  "timezone": "Europe/Berlin",
+  // keep PRs up-to-date with base branch
+  "rebaseWhen": "behind-base-branch",
+  // give it a couple of days before updating dependencies
+  "minimumReleaseAge": "2 days",
+  "packageRules": [
+    {
+      // https://github.com/renovatebot/renovate/discussions/26959#discussioncomment-8349483
+      "description": "Disable minimumReleaseAge for gradle plugins",
+      "matchManagers": ["gradle"],
+      "matchDepTypes": ["plugin"],
+      "minimumReleaseAge": null
+    }
+  ]
 }
