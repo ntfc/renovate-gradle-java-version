@@ -1,0 +1,21 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    // https://docs.renovatebot.com/presets-config/#configrecommended
+    "config:recommended",
+    // https://docs.renovatebot.com/semantic-commits/#manually-enabling-or-disabling-semantic-commits
+    ":semanticCommits",
+    // https://docs.renovatebot.com/presets-group/#grouplinters
+    "group:linters",
+    // https://docs.renovatebot.com/presets-group/#groupallnonmajor
+    "group:allNonMajor",
+    // group @types packages
+    // https://docs.renovatebot.com/presets-group/#groupdefinitelytyped
+    "group:definitelyTyped",
+    // group download and upload artifact actions
+    // https://docs.renovatebot.com/presets-group/#groupgithubartifactactions
+    "group:githubArtifactActions",
+    // https://docs.renovatebot.com/presets-customManagers/#custommanagersdockerfileversions
+    "customManagers:dockerfileVersions",
+  ],
+}
