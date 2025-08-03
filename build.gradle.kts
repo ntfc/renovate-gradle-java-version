@@ -5,7 +5,7 @@ val depAVersion = "0.8.1"
 val depBVersion = "1.25.6"
 
 plugins {
-    val kotlinVersion = "2.1.10"
+    val kotlinVersion = "2.2.0"
 
     kotlin("jvm") version kotlinVersion
     kotlin("plugin.serialization") version kotlinVersion
@@ -27,7 +27,7 @@ configurations {
 
 
 dependencies {
-    testImplementation(platform("org.junit:junit-bom:5.10.0"))
+    testImplementation(platform("org.junit:junit-bom:5.13.4"))
     testImplementation("org.junit.jupiter:junit-jupiter")
 }
 
